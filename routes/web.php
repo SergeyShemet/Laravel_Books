@@ -14,7 +14,8 @@ use App\Http\Controllers\LogoutController;
 
 
 Route::get('/', [MainController::class, 'home'])->name('home');
-
+Route::get('/importXls', [MainController::class, 'importXls'])->name('import');
+Route::post('/importupdate', [MainController::class, 'importupdate'])->name('importupdate');
 
 Route::get('/books/{catslug}/create', [BooksController::class, 'create'])->name('bookcreate');                  //создание книг
 
