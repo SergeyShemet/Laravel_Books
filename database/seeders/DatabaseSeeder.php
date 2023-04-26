@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         DB::table('categories')->insert([ 'title' => 'Историческое', 'slug' => 'history','created_at' => Now() ]);
         DB::table('categories')->insert([ 'title' => 'Научная фантастика', 'slug' => 'science_fiction','created_at' => Now() ]);
         DB::table('categories')->insert([ 'title' => 'Романы', 'slug' => 'romance','created_at' => Now() ]);
-        DB::table('categories')->insert([ 'title' => 'Фентези', 'slug' => 'fantasy','created_at' => Now() ]);
+        DB::table('categories')->insert([ 'title' => 'Фэнтези', 'slug' => 'fantasy','created_at' => Now() ]);
         DB::table('categories')->insert([ 'title' => 'Психология', 'slug' => 'psychology','created_at' => Now() ]);
         DB::table('categories')->insert([ 'title' => 'Юмор', 'slug' => 'humor','created_at' => Now() ]);
         DB::table('categories')->insert([ 'title' => 'Технологии', 'slug' => 'tech','created_at' => Now() ]);
