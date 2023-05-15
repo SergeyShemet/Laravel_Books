@@ -5,7 +5,7 @@
     <small>{{ $el->created_at }}</small> --- <strong> {{ $el->users->name }} </strong>
         <span class="text-secondary"> {{ $el->users->isAdmin != 0 ? '(сотрудник)' : '' }}  </span>
 
-        @if(Auth::check() && Auth::user()->isAdmin)
+        @if((Auth::check() && Auth::user()->isAdmin) || (Auth::check() && $el->users->id == Auth::user()->id))
             <button wire:click="$emit('deleteComment',{{ $el->id }})" class="btn btn-sm btn-outline-danger" style="margin-left: 30px">Удалить</button>
         @endif
 
