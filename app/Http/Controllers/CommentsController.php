@@ -30,15 +30,7 @@ class CommentsController extends Controller
      */
     public function store(StoreCommentsRequest $request, $book_id, $user_id)
     {
-        $validated = $request->validated();
-        $dbpost = new Comments();
-        $dbpost->comment = $request->input('text');
-        $dbpost->books_id = $book_id;
-        $dbpost->users_id = $user_id;
-
-        $dbpost->save();
-
-        return back();
+       //replaced by LiveWire
     }
 
     /**
@@ -70,10 +62,7 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
-        $target_obj = Comments::Find($id);
-        $target_obj->delete();
-
-        return back();
+        //replaced by LiveWire
 
     }
 }

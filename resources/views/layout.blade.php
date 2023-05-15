@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <title>@yield('title')</title>
+    @livewireStyles
 </head>
 <body class="bg-dark text-white">
     <header class="p-3 text-bg-dark">
@@ -57,7 +58,8 @@
       <div class="container">
 
         @yield('content')
-    </div>
 
+    </div>
+    @livewireScripts
 </body>
 </html>
