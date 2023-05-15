@@ -22,7 +22,7 @@ class Comments extends Component
     }
 
     public function storeComment() {
-
+        if ($this->comm_text == '') return;
         $dbpost = new Comm();
         $dbpost->comment = $this->comm_text;
         $dbpost->books_id = $this->bookId;
@@ -34,7 +34,6 @@ class Comments extends Component
 
     public function render()
     {
-
         $comments = Books::find($this->bookId)->comment()->with('users')->get();
         return view('livewire.comments', compact('comments'));
     }
