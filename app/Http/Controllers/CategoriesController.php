@@ -52,7 +52,7 @@ class CategoriesController extends Controller
         $booklist = array();
         $b = $category->books;
         if (count($b) != 0) {
-           $booklist = $b->toQuery()->paginate(10);
+           $booklist = $b->toQuery()->paginate(12);
         }
 
 
